@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comunicación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <!-- FONDO DECORATIVO -->
+  <div class="bg-blur blur-1"></div>
+  <div class="bg-blur blur-2"></div>
+  <div class="bg-grid"></div>
+
+  <!-- NAV -->
+  <header class="topbar">
+    <div class="logo">Comunicación✨</div>
+    <nav class="nav">
+      <a href="#intro">Inicio</a>
+      <a href="#mood">Integrantes</a>
+      <a href="#exercise">Ejercicio</a>
+      <a href="#reflection">Reflexiónes</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="hero-text">
+      <h1><span>la Comunicación</span></h1>
+      <p class="hero-description">
+       La comunicación es una forma de expresarnos y de conectar con los demás, 
+       ya que a través de ella podemos compartir lo que sentimos, pensamos y queremos decir.
+      </p>
+
+      <p class="hero-description">
+      La comunicación es importante porque nos permite compartir ideas, expresar emociones y comprender a los demás. Gracias a ella podemos convivir mejor,
+       trabajar en equipo y mantener relaciones sanas y respetuosas.
+      </p>
+
+    </div>
+
+    <div class="hero-card">
+      <p class="mini-label">Estado del día</p>
+      <h3>¿Cómo te sientes hoy?</h3>
+      <div class="mini-moods">
+        <button onclick="setMood('Feliz', 'Hoy tu energía se siente ligera y positiva ✨')">😊</button>
+        <button onclick="setMood('En calma', 'Tu mente está buscando equilibrio y serenidad 🌙')">😌</button>
+        <button onclick="setMood('Cansado/a', 'Tu cuerpo y mente te están pidiendo una pausa 💭')">😴</button>
+        <button onclick="setMood('Estresado/a', 'Respira. Una pequeña pausa puede cambiar mucho 🌿')">😣</button>
+      </div>
+      <div class="mood-result" id="moodResult">
+        <strong>Selecciona una emoción</strong>
+        <p>Acá aparecerá una pequeña reflexión según tu estado de ánimo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN REVISTA -->
+  <main class="magazine-layout">
+
+    <!-- BLOQUE DESTACADO -->
+    <section class="feature-card">
+      <div class="feature-content">
+        <h2>¿Cómo nos ayuda la comunicación ?</h2>
+        <p>
+        La comunicación nos puede ayudar a cumplir nuestras metas porque nos permite expresar nuestras ideas, pedir ayuda cuando la necesitamos, trabajar en equipo, resolver problemas y entender mejor a los demás.
+Cuando nos comunicamos de forma clara y respetuosa, 
+es más fácil organizar nuestras ideas, 
+tomar buenas decisiones y avanzar con más seguridad hacia lo que queremos lograr.
+        </p>
+      </div>
+    </section>
+
+    <!-- TARJETAS DE EMOCIONES -->
+    <section class="section-block" id="mood">
+      <div class="section-header">
+        <h2>Integrantes</h2>
+      </div>
+
+      <div class="emotion-grid">
+        <article class="emotion-card">
+          <div style="text-align: center;">
+        <h3>Anyi Carolina Gonzalez henao </h3>
+
+         <img src="img/2.jpg.jpeg" alt="Foto de Anyi" width="180" height="180" style="border-radius: 50%; border: 3px solid #0c090a;">
+         
+          <p>Soy Anyi, tengo 19 años y me gusta mucho la tecnología. Soy una persona tranquila,
+             pero me gusta aprender y seguir creciendo en este mundo digital.</p>
+        </div>
+          
+        </article>
+        
+        <article class="emotion-card">
+                    <div style="text-align: center;">
+        <h3>Wendi Marcela Ramos Pastrana </h3>
+
+         <img src="img/1.jpg.jpeg" alt="Foto de Anyi" width="180" height="180" style="border-radius: 50%; border: 3px solid #0e0b0c;">
+         
+          <p>Soy Wendy, tengo 23 años y me interesa mucho la tecnología. 
+            Soy una persona responsable y dedicada, 
+            siempre dispuesta a aprender y a esforzarme por entender,.</p>
+        </div>
+        </article>
+
+        
+      </div>
+    </section>
+
+    <!-- EJERCICIO INTERACTIVO -->
+    <section class="exercise-section" id="exercise">
+      <div class="section-header">
+        <h2>Tipos de 
+             comunicación</h2>
+        <img src="img/co1.jpg" alt="Foto de Anyi" width="280" height="180" style= "border: 3px solid black ">
+         <img src="img/co2.jpg" alt="Foto de Anyi" width="280" height="180" style="border: 3px solid #0c090a;">
+         <img src="img/co3.jpg" alt="Foto de Anyi" width="280" height="180" style=" border: 3px solid #0c090a;">
+         <img src="img/co4.jpg" alt="Foto de Anyi" width="280" height="180" style=" border: 3px solid #0c090a;">
+
+      </div>
+
+      <div class="exercise-box">
+        <p id="exerciseText">
+          Presiona el botón para descubrir una pausa activa, ejercicio visual o ejercicio de respiración.
+        </p>
+        <button class="primary-btn" onclick="newExercise()">Conoscamos los tipos de comunicación</button>
+      </div>
+    </section>
+
+    <!-- FRASE / REFLEXIÓN -->
+    <section class="quote-block">
+      <p class="quote-mark">“</p>
+      <blockquote id="quoteText">
+        Cuidar nuestras emociones también es una forma de avanzar.
+      </blockquote>
+      <button class="ghost-btn small" onclick="newQuote()">Cambiar frase</button>
+    </section>
+
+    <!-- MORALEJA FINAL -->
+    <section class="reflection-section" id="reflection">
+      <div class="section-header">
+        <h2>Reflexión de tipos de comunicaciónes</h2>
+      </div>
+
+      <div class="reflection-card">
+
+
+                <p class="hh">
+     Este tema me hizo entender que la forma en que hablamos puede afectar mucho a las personas que nos rodean. No solo importa lo que decimos, sino también cómo lo decimos. A veces por enojo, miedo o costumbre podemos comunicarnos mal y eso puede causar problemas o malos entendidos.
+
+Por eso, pienso que es importante aprender a usar la comunicación asertiva,
+ porque nos ayuda a expresar nuestras ideas y sentimientos con respeto. 
+ Si aprendemos a hablar con calma, escuchar a los demás y decir lo que pensamos de buena manera,
+ podemos tener mejores relaciones en nuestro día a día.
+        </p>
+        <br>
+                      <button class="hola" onclick="window.location.href='https://docs.google.com/document/d/1erXEXwtAkY1ieK89DSVuFRfz4-Ui27NkDnVpxieYm7k/edit?usp=sharing'"> 
+  Ver más
+</button>
+      </div>
+    </section>
+
+
+  <br>
+
+      <section class="reflection-section" id="reflection">
+      <div class="section-header">
+        <h2>Reflexión de  Anyi</h2>
+      </div>
+
+      <div class="reflection-card">
+
+
+                <p>
+    En esta competencia aprendí cosas muy importantes que me van a servir en mi vida diaria. 
+    Me di cuenta de que no siempre es necesario hablar para expresar lo que sentimos o pensamos, 
+    porque también lo hacemos con nuestras acciones y nuestra forma de comportarnos.
+     Para mí fue un aprendizaje muy bonito porque entendí que debemos ser más atentos con los demás,
+      saber escuchar y también pensar antes de hablar. Todo esto me dejó una enseñanza muy significativa,
+     ya que ahora siento que puedo comunicarme mejor y entender más a las personas que me rodean.
+        </p>
+        <br>
+</button>
+      </div>
+    </section>
+    <br>    <section class="reflection-section" id="reflection">
+      <div class="section-header">
+        <h2>Reflexión de Wendy</h2>
+      </div>
+
+      <div class="reflection-card">
+
+
+                <p>
+     Lo que aprendí en esta competencia me gustó mucho porque me hizo pensar en cómo me relaciono con los demás todos los días.
+      A veces uno cree que solo importa lo que dice, pero también es importante la manera en que actúa o demuestra lo que siente.
+       Este aprendizaje me ayudó a entender que debemos tener más empatía, respeto y cuidado al momento de expresarnos. 
+       Siento que fue algo muy útil porque no solo lo aprendí para una clase,
+      sino que también me puede servir en mi casa, con mis amigos y en cualquier lugar.
+        </p>
+        <br>
+</button>
+      </div>
+    </section>
+
+    <section class="reflection-section" id="reflection">
+      <div class="section-header">
+        <h2>Evidencias</h2>
+      </div>
+
+      <div class="reflection-cardo">
+        <h2>La sapa Caramelo </h2>
+        <h1>Aprendiz:Anyi Carolina Gonzalez henao  </h1>
+
+
+<br>
+      <p>
+
+        
+La sapa Caramelo estaba sentada a la orilla del río Cauca, sobre el peñasco más alto de la región. Mientras observaba el agua correr, de pronto vio un pájaro hermoso, cubierto de muchos colores brillantes. Al verlo, Caramelo quedó maravillada.
+El pájaro se acercó lentamente y la emoción fue tan grande que la sapa estornudó con fuerza, haciendo que se le escapara un moco. Avergonzada, pensó que el pájaro lo había notado. Sin embargo, él se posó tranquilamente en una estaca cercana, la saludó con amabilidad y se presentó como Cielo.
+Cielo le contó que tenía una molestia en una de sus alas: un nudo le dificultaba volar. Con respeto, le pidió ayuda a la sapa Caramelo para desatarlo. Ella aceptó sin pensarlo y, con mucho cuidado, comenzó a deshacer el nudo. Al hacerlo, descubrió que dentro había una tapa pegada. Con delicadeza, logró retirarla.
+Al sentirse libre del nudo, el pájaro expresó su profundo agradecimiento, pues aquella molestia le causaba gran incomodidad al volar. Gracias a la ayuda de Caramelo, había recuperado la esperanza para continuar su viaje.
+Finalmente, se despidieron con cariño. El pájaro Cielo emprendió su vuelo hacia el cielo multicolor, mientras la sapa Caramelo lo observaba alejarse, feliz por haber ayudado a un nuevo amigo.
+
+
+      
+      </p>
+      
+      </div>
+<br>
+<br>
+
+      <div class="reflection-cardo">
+        <h2>La sapa Caramelo </h2>
+        <h1>Aprendiz:Wendi Marcela Ramos Pastrana </h1>
+        <br>
+<p>Estaba la sapa Caramelo sentada a la orilla del río Cauca, en el peñasco más alto de la región,
+   observando un poco la naturaleza que rodea el río Cauca. Cuando, de repente, le dio un estornudo y,
+    ¡zas!, un moco. Muy sorprendida, la sapa Caramelo tomó una estaca para bajar del peñasco y caminar por las orillas del río.
+     Al instante, se encontró con un oso atrapado en las orillas del río y decidió ayudarlo, 
+     pero se percató de que el oso tenía un nudo en su pata.
+      Salió en busca de ayuda para ayudar al oso y se encontró un pozo donde posiblemente había objetos que la podían ayudar, 
+      pero el pozo se encontraba con una tapa.
+   Buscó la forma de entrar al pozo, lo logró y volvió donde el oso. Finalmente, logró desenredarlo, y el oso le dio nuevas esperanzas.</p>
+
+<br>
+
+      
+      </div>
+
+
+      
+<br>
+<br>
+
+      <div class="reflection-cardo">
+        <h1>Funciones del lenguaje </h1>
+        <br>
+                <img src="img/fun.jpg" alt="Foto de Anyi" width="480" height="380" style= "border: 3px solid rgb(246, 248, 238) ">
+
+
+<br>
+<br>
+      <p>
+
+        
+El lenguaje es una herramienta muy importante que usamos todos los días para comunicarnos, 
+expresar lo que sentimos, dar información, pedir cosas y entender a los demás.
+ Dentro del lenguaje existen varias funciones que nos ayudan a cumplir diferentes propósitos al hablar o escribir.
+  Estas funciones son la emotiva, apelativa, referencial, fática, poética y metalingüística,
+ y cada una tiene un uso especial según lo que queramos comunicar.
+
+      
+      </p>
+      <br>
+
+              <button class="hola" onclick="window.location.href='https://canva.link/n0isiprdg3llg30'">  
+  Ver más
+</button>
+      </div>
+
+  
+
+    </section>
+        <section class="quote-block1">
+      <blockquote id="quoteText">
+            COMUNICACIÓN NO VERBAL      </blockquote>
+
+            <p>La comunicación no verbal es la forma en que las personas transmiten mensajes sin usar palabras, 
+              a través de gestos, expresiones faciales, posturas, miradas, movimientos del cuerpo y el tono de voz.
+               Este tipo de comunicación es muy importante porque muchas veces expresa emociones, intenciones o actitudes 
+               de manera más clara que las palabras. Por ejemplo, una sonrisa puede mostrar alegría, cruzar los brazos puede indicar molestia 
+               o inseguridad, y mirar a los ojos demuestra atención e interés. En resumen,
+               la comunicación no verbal complementa lo que decimos y nos ayuda a entender mejor a los demás.</p>
+               <br>
+      <button class="ghost-btn small" onclick="window.location.href='https://docs.google.com/document/d/1FUDHsKEH4Pk2Zo5XjLuhmO5lR_t859lypvF29-jQ7LI/edit?usp=sharing'"> ANÁLISIS DE LA COMUNICACIÓN - Anyi</button>
+      <button class="ghost-btn small" onclick="window.location.href=' https://docs.google.com/document/d/1WpD1kEBqXRgjPSJ_KOVQO5I4SbX4Db3R/edit?usp=sharing&ouid=102342907768082406740&rtpof=true&sd=true'"> ANÁLISIS DE LA COMUNICACIÓN- Wendy</button>
+
+
+     
+    </section>
+
+    <section class="reflection-section" id="reflection">
+      <div class="section-header">
+        <h2>Película el abuelo</h2>
+                        <img src="img/abu.jog.jpg" alt="Foto de Anyi" width="480" height="380" style= "border: 3px solid rgb(17, 17, 19) ">
+
+
+      </div>
+
+      <div class="reflection-card">
+
+
+                <p>
+   La película nos enseña que nunca es tarde para aprender a amar, asumir responsabilidades y hacer lo correcto, 
+   porque a veces las personas descubren el verdadero valor de la familia cuando abren su corazón.
+        </p>
+        <br>
+                      <button class="hola" onclick="window.location.href='https://romance.lamariluna.com/el-abuelo-pelicula-completa/'"> 
+  Ver Película
+</button>
+      </div>
+    </section> 
+
+
+
+  </main>
+
+  <script src="escripi.js"></script>
+
+<div class="game-container">
+  <h1>🐸 Crea tu cuento de la Sapa Caramelo</h1>
+  <p>Tienes <strong>20 segundos</strong> para escribir un cuento usando todas estas palabras:</p>
+
+  <div class="words">
+    moco • tapa • estaca • nudo • esperanza
+  </div>
+
+  <div class="timer" id="timer">60</div>
+
+  <textarea id="storyInput" placeholder="Escribe aquí tu cuento..."></textarea>
+  <br>
+  <button onclick="startGame()">Iniciar juego</button>
+  <button onclick="finishGame()">Terminar antes</button>
+
+  <div id="resultBox" class="result">
+    <h2>Resultado del juego</h2>
+    <p id="wordCheck"></p>
+    <div class="reflection">
+      <strong>Reflexión:</strong><br><br>
+      A veces creemos que solo estamos escribiendo un cuento, pero en realidad también estamos usando nuestra imaginación, creatividad y pensamientos.  
+      En este juego, la palabra escondida es:
+      <div class="hidden-word">MENTE</div>
+      <br>
+      <strong>Mensaje:</strong>  
+      Tu mente es poderosa. Con ella puedes crear, imaginar, resolver problemas y darle vida a tus ideas.  
+      Así como la sapa Caramelo encontró soluciones en su camino, tú también puedes usar tu mente para superar obstáculos y encontrar esperanza en cualquier situación. 🌟
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+    <p> pagína de comunicaciónes✨ </p>
+  </footer>
+  
+</body>
+</html>
+
